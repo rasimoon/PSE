@@ -168,6 +168,7 @@ def display_bboxes(bboxes_dict, img, type = 'all'):
     if type == 'all':
         cv.imshow('Image with Highlighted Objects', img_cop)
         cv.waitKey(0)
+        cv.imwrite('sample.jpg', img_cop)
         cv.destroyAllWindows()   
         
 
@@ -177,6 +178,6 @@ def add_bboxes(object_1, object_2, bboxes_dict):
 
 
 bboxes_dict = create_bboxes(objects_dict, edge_coordinates=edge_coordinates)
-display_bboxes(bboxes_dict=bboxes_dict, img=img, type="select")
+display_bboxes(bboxes_dict=bboxes_dict, img=img, type="all")
 
 
